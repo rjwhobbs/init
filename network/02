@@ -4,3 +4,5 @@ ifconfig | egrep -o 'broadcast\s+\d+\.\d+\.\d+.\d+'
 ifconfig | egrep -o 'broadcast\s+\d+\.\d+\.\d+\.\d+' | egrep -o '\d+\.\d+\.\d+\.\d+'
 
 # (b)
+# Seems like you first need to ping your own broadcast IP address then run arp -a.
+arp -a | egrep -o '\d+\.\d+\.\d+\.\d+'
