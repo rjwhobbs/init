@@ -1,0 +1,6 @@
+# (Probably wrong) (a)
+ifconfig | egrep -o 'broadcast\s+\d+\.\d+\.\d+.\d+'
+# or do you even egrep. Seems grep on mac doesn't have -P flag or group num match, eg -o2.
+ifconfig | egrep -o 'broadcast\s+\d+\.\d+\.\d+\.\d+' | egrep -o '\d+\.\d+\.\d+\.\d+'
+
+# (b)
