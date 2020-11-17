@@ -1,0 +1,3 @@
+# (a)
+ifconfig -a | grep -oP 'broadcast\s+(\d+\.){3}\d+' | grep -oP '(\d+\.){3}\d+'
+
