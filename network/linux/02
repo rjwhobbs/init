@@ -1,3 +1,8 @@
-# (a)
+# (a) PDF version
 ifconfig -a | grep -oP 'broadcast\s+(\d+\.){3}\d+' | grep -oP '(\d+\.){3}\d+'
 
+# marking sheet
+# ehternet
+ifconfig -a | grep -Poz 'enp1s0f1.+\n(\s{8}.+\n)+'
+# wifi interface
+ifconfig -a | grep -Poz 'wlp2s0.+\n(\s{8}.+\n)+'
