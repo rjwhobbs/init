@@ -1,7 +1,10 @@
-# (a) PDF version
+# PDF version
+# (a) 
 ifconfig -a | grep -oP 'broadcast\s+(\d+\.){3}\d+' | grep -oP '(\d+\.){3}\d+'
+# (b)
+nmap -sP 192.168.43.0/24
 
-# marking sheet
+# marking sheet version
 # ehternet
 ifconfig -a | grep -Poz 'enp1s0f1.+\n(\s{8}.+\n)+'
 # wifi interface
