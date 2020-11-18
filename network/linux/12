@@ -1,0 +1,6 @@
+# pdf
+dig +short myip.opendns.com @resolver1.opendns.com
+
+# marking sheet
+ping 10.51.1.253
+# This was unreachable, use dig 42.fr and then ping the IP you find
