@@ -2,5 +2,12 @@
 dig +short myip.opendns.com @resolver1.opendns.com
 
 # marking sheet
+# (a)
 ping 10.51.1.253
 # This was unreachable, use dig 42.fr and then ping the IP you find
+# (b) 
+# No idea what the marking sheet wants here
+
+# Notes on rDNS: "Note that PTR records are not required for IP addresses. 
+# If a PTR record is not defined for an IP address, you cannot do a remote DNS lookup. "
+# https://linuxcommando.blogspot.com/2008/07/how-to-do-reverse-dns-lookup.html
