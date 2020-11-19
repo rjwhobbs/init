@@ -1,0 +1,2 @@
+# kill the process and prove that it's terminated
+kill <pid> && ps aux | grep tail
