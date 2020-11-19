@@ -1,0 +1,3 @@
+sudo sysv-rc-conf --list
+# or 
+systemctl list-units --type service
