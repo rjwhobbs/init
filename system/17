@@ -1,0 +1,5 @@
+# pdf
+# Basically
+ssh <user>@<ip>
+# If you are using a key
+ssh -1 <path to key> <user>@<ip>
