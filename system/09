@@ -1,0 +1,7 @@
+w
+# or
+who
+# or
+ss | grep ssh
+# or
+last -a | grep 'still logged in'
