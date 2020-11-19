@@ -1,0 +1,1 @@
+sudo du -h /var | grep -P '/var/\.?[a-z0-9]+$'
