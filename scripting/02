@@ -1,0 +1,14 @@
+#!/bin/bash
+
+USERINPUT=$1
+ONLINE="$(who | awk '{print $1}' | grep -o ^"$USERINPUT"$)"
+
+if [ "$ONLINE" == "$USERINPUT" ]
+then
+	echo "The user \"$USERINPUT\" is logged in, logging them out then deleting their account."
+	killall -u "$USERINPUT"
+	deluser "$USERINPUT"
+	echo "\"$USERINPUT\" has been logged out and their account deleted."
+else
+	echo "The user \"$USERINPUT\" is not logged in."
+fi
