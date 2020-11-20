@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# This script creates a new user and gives them the same ssh
+# key as the '1000' user. This is for testing purposes.
+
+usage="usage: <$0> <username>" 
+username=$1
+
+if [ -z "$username" ]
+then
+	echo "Script error: $usage"
+	exit 1
+elif [ "$EUID" -ne 0 ]
+then
+	echo "Script error: this script needs to be run with root priviledges."
+	exit 1
+fi
+
+adduser "$username"
+
+mainuser="$( grep ':x:1000:' /etc/passwd | awk '{print $1}' )"
+
+echo $mainuser
