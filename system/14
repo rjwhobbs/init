@@ -1,2 +1,5 @@
 # Run tail in background and detach it from the current terminal
 tail -f /var/log/syslog </dev/null &>/dev/null &
+# run 
+jobs
+# to prove it is running
