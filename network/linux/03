@@ -1,1 +1,1 @@
-ifconfig -a | grep -Poz 'wlp2s0(.+\n)+\s{8}ether\s(\w{2}\:){5}\w{2}' | awk '/wlp2s0/ || /ether/ {print $1 " " $2}'
+ifconfig <interface name> | grep -Poz 'wlp2s0(.+\n)+\s{8}ether\s(\w{2}\:){5}\w{2}' | awk '/wlp2s0/ || /ether/ {print $1 " " $2}'
