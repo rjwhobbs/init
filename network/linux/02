@@ -1,5 +1,5 @@
 # PDF version
-# (a) 
-ifconfig -a | grep -oP 'broadcast\s+(\d+\.){3}\d+' | grep -oP '(\d+\.){3}\d+'
+# (a)
+ifconfig <interface name> | grep -oP 'broadcast\s+(\d+\.){3}\d+' | grep -oP '(\d+\.){3}\d+'
 # (b)
-nmap -sP <your private ip>/24
+ip a show <interface name> | grep -oP 'inet\s+(\d+\.){3}\d+/\d{2}' | awk '{print $2}' | xargs nmap -sP
