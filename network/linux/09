@@ -1,1 +1,4 @@
-dig 42.fr
+dig 42.fr | grep -P '^42\.fr\..+'
+# gives the following output:
+# 42.fr.			1483	IN	A	163.172.250.13
+# 42.fr.			1483	IN	A	163.172.250.12
