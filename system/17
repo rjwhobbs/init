@@ -1,5 +1,4 @@
-# pdf
-# Basically
 ssh <user>@<ip>
-# If you are using a key
-ssh -1 <path to key> <user>@<ip>
+# If you are using a key use the -i flag and give a path to the private key.
+# Use -X flag before the -i flag inorder to do X11 forwarding (gui session).
+ssh -X -i <path to key> <user>@<ip>

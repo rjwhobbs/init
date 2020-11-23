@@ -1,3 +1,4 @@
 # kill the process and prove that it's terminated
 ps aux | grep tail | grep -v grep | awk '{print $2}' | xargs kill
-ps aux | grep tail | grep -v grep
+# Turns out you can run any cmd or even just press enter and 
+# you will get a message that the process was terminated
