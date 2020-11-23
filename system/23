@@ -1,3 +1,12 @@
+# Create the new user on the VM using 'sudo adduser <username>'.
+# If you are using keys generate a new key on the local system, eg.
+ssh-keygen -b 2048 -t rsa
+# Save the private key on the local machine
+# Save the public key in the new user's /home/username/.ssh/authorized_keys file
+# on the remote system.
+# Besure to give the correct permissions during creation and once done
+# and then to give ownership to /home/username/.ssh/ to the new user
+
 # How to connect to GUI on (Debian) VM
 # Install the following on your VM for X11 forwarding 
 sudo apt-get install xorg
