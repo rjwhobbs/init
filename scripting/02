@@ -7,7 +7,7 @@ if [ "$ONLINE" == "$USERINPUT" ]
 then
 	echo "The user \"$USERINPUT\" is logged in, logging them out then deleting their account."
 	killall -u "$USERINPUT"
-	deluser "$USERINPUT"
+	deluser --remove-home "$USERINPUT"
 	echo "\"$USERINPUT\" has been logged out and their account deleted."
 else
 	echo "The user \"$USERINPUT\" is not logged in."
