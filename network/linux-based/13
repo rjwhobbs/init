@@ -1,4 +1,4 @@
 dig +short myip.opendns.com @resolver1.opendns.com | xargs dig -x
 # Note that PTR records are not required for IP addresses. 
-# If a PTR record is not defined for an IP address, you cannot do a remote DNS lookup
+# If a PTR record is not defined for an IP address, you cannot do a reverse DNS lookup
 # https://linuxcommando.blogspot.com/2008/07/how-to-do-reverse-dns-lookup.html
