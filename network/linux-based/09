@@ -1,4 +1,6 @@
-dig 42.fr | grep -P '^42\.fr\..+'
+dig 42.fr | grep -P '^42\.fr\..+' | grep -Po '\d+(\.\d+){3}'
 # gives the following output:
 # 42.fr.			1483	IN	A	163.172.250.13
 # 42.fr.			1483	IN	A	163.172.250.12
+# A simple nslookup will also work
+# nslookup 42.fr 
