@@ -1,8 +1,8 @@
 # who is better as w truncates
-w
+# w
 # or
 who
 # or
-ss | grep ssh
+# ss | grep ssh
 # or
-last -a | grep 'still logged in'
+# last -a | grep 'still logged in'
