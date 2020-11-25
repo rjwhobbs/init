@@ -4,7 +4,7 @@ whois slash16.org
 # eg, we can see from the ouptut that their domain name is registered 
 # with https://www.bookmyname.com . One will need to look for other 
 # clues to see who s hosting their website, one can see from
-# the name servers they are using that it is with AWS.
+# the name servers that they that it is with AWS.
 
 # Google will probably be a better place to get more info on the site 
 # if needed but this is quick way to use on the terminal.
