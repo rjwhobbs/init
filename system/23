@@ -4,8 +4,8 @@ ssh-keygen -b 2048 -t rsa
 # Save the private key on the local machine
 # Save the public key in the new user's /home/username/.ssh/authorized_keys file
 # on the remote system.
-# Besure to give the correct permissions during creation and once done
-# and then to give ownership to /home/username/.ssh/ to the new user
+# Besure to give the correct permissions during creation once done
+# and then to give ownership of /home/username/.ssh/ to the new user
 
 # How to connect to GUI on (Debian) VM
 # Install the following on your VM for X11 forwarding 
@@ -23,6 +23,7 @@ sudo service ssh restart
 exit
 # Use -X to ssh in along side GUI session
 ssh -X -i <path to key> <user name>@<ip>
+# Test using GUI vim
 # Install gvim to test
 sudo apt-get install vim-gtk
 # Run gvim
