@@ -1,1 +1,2 @@
-ifconfig <interface name> | grep -Poz 'wlp2s0(.+\n)+\s{8}ether\s(\w{2}\:){5}\w{2}' | awk '/wlp2s0/ || /ether/ {print $1 " " $2}'
+# Arg must be name of wifi internace.
+ifconfig "$1" | grep -Poz "$1(.+\n)+\s{8}ether\s(\w{2}\:){5}\w{2}" | awk ' { if(NR==1 || NR==4) print $1 " " $2}'
