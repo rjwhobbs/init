@@ -1,5 +1,8 @@
 # PDF version
+# Argument must be the current network interface that is connected to the internet
 # (a)
-ifconfig <interface name> | grep -oP 'broadcast\s+(\d+\.){3}\d+' | grep -oP '(\d+\.){3}\d+'
+echo "(a)"
+ifconfig "$1" | grep -oP 'broadcast\s+(\d+\.){3}\d+' | grep -oP '(\d+\.){3}\d+'
 # (b)
-ip a show <interface name> | grep -oP 'inet\s+(\d+\.){3}\d+/\d{2}' | awk '{print $2}' | xargs nmap -sP
+echo "(b)"
+ip addr show "$1" | grep -oP 'inet\s+(\d+\.){3}\d+/\d{2}' | awk '{print $2}' | xargs nmap -sP
