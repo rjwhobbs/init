@@ -1,5 +1,5 @@
-ps aux | grep -e /usr/sbin/sshd | grep -v grep | tr -s " " | cut -d " " -f2
+# ps aux | grep -e /usr/sbin/sshd | grep -v grep | tr -s " " | cut -d " " -f2
 # or
-cat /var/run/sshd.pid
+# cat /var/run/sshd.pid
 # or
 ps aux | grep -e /usr/sbin/sshd | grep -v grep | awk '{print $2}'
